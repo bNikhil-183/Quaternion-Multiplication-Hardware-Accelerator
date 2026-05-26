@@ -187,3 +187,7 @@ https://share.google/DvmhEwlhn4XL35j5F
 - Arduino IDE (IMU Communication)
 - Overleaf (Report Documentation)
 - Git & GitHub (Version Control)
+
+## 9. Final Report and Drive link
+https://docs.google.com/document/d/1jY1LUBn4FEF4sAwCkAkzUewO0r-i0x2Vs0fXSF86XIc/edit?tab=t.0#heading=h.t50rf1x4p49
+https://drive.google.com/drive/folders/1YP_Byf0MBOLX3deUg5zV2Wzw2nBAUmB-
