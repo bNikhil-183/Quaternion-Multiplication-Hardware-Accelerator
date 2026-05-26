@@ -1,5 +1,4 @@
-def generate_readme():
-    readme_content = r"""# Hardware Accelerator for Real-Time Orientation Using IMU Data
+Hardware Accelerator for Real-Time Orientation Using IMU Data
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
 ![Platform](https://img.shields.io/badge/Platform-FPGA%20(PYNQ--Z2)%20%7C%20Arduino-blue)
