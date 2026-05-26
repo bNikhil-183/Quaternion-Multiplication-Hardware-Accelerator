@@ -176,27 +176,4 @@ This TB simulates physical object rotations (Roll, Pitch, Yaw) fed directly into
 2.  **Fractional Arithmetic (Q-Format):** Scaling data (e.g., shifting `[30:15]`) proved essential. Floating point math is incredibly hardware intensive; using scaled integers (Q15/Q30) bypassed the need for a DSP block, preserving FPGA logic real estate.
 3.  **Algorithmic Efficiency:** Swapping simple multipliers for Booth encoding halved the partial product accumulation phase.
 
----
 
-## 8. Repository Structure
-
-```text
-├── src/
-│   ├── direct_multiplication.v                # Combinational direct implementation
-│   ├── direct_multiplication_pipelined.v      # Pipelined direct implementation (clk1, clk2)
-│   ├── multiplication_algorithmic.v           # Combinational algorithmic (Booth, Baugh-Wooley)
-│   ├── algorithmic_multiplication_pipelined.v # Highly pipelined algorithmic (CLA32)
-│   ├── IMU_to_FPGA.v                          # Bonus: Direct IMU Delta processing on FPGA
-│
-├── testbenches/
-│   ├── tb_algorithmic_pipelined.v             # Static vector math verification
-│   ├── tb_bonus.v                             # Real-time Q-format rotational feedback loop
-│
-├── software/
-│   └── Final_Arduino_SOC.ino                  # I2C Gyro extraction and UART to FPGA logic
-│
-├── docs/
-│   ├── Electronics.pdf                        # Project prompt and requirements
-│   └── IITI_SOC_Final_PPT.pptx                # Final project presentation
-│
-└── README.md                                  # You are here
