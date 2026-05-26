@@ -1,7 +1,4 @@
-Hardware Accelerator for Real-Time Orientation Using IMU Data
-
-![Project Status](https://img.shields.io/badge/Status-Completed-success)
-![Platform](https://img.shields.io/badge/Platform-FPGA%20(PYNQ--Z2)%20%7C%20Arduino-blue)
+# EL_007: Hardware Accelerator for Quaternion Multiplication
 ![Language](https://img.shields.io/badge/Language-Verilog%20%7C%20C%2B%2B-orange)
 ![Event](https://img.shields.io/badge/Event-IITI%20SOC%202025%20(Electronics)-purple)
 
@@ -174,5 +171,19 @@ This TB simulates physical object rotations (Roll, Pitch, Yaw) fed directly into
 1.  **Pipelining is Non-Negotiable:** Continuous IMU data streaming (e.g., at 1000Hz) requires pipelining to avoid missing samples while the multiplier processes data.
 2.  **Fractional Arithmetic (Q-Format):** Scaling data (e.g., shifting `[30:15]`) proved essential. Floating point math is incredibly hardware intensive; using scaled integers (Q15/Q30) bypassed the need for a DSP block, preserving FPGA logic real estate.
 3.  **Algorithmic Efficiency:** Swapping simple multipliers for Booth encoding halved the partial product accumulation phase.
+---
+## 8. External Resources
 
+https://share.google/vLRxOtKJnZ5gnRpvB
+https://share.google/mTRVE3X9I1PaTySKQ
+https://share.google/U68MjuvapWPtFbpu9
+https://share.google/SIA1VyrFZaAz3vVPz
+https://share.google/DvmhEwlhn4XL35j5F
 
+## 9. Tools Used
+
+- Xilinx Vivado (Simulation & Synthesis)
+- Modelsim and Quartus (for testing)
+- Arduino IDE (IMU Communication)
+- Overleaf (Report Documentation)
+- Git & GitHub (Version Control)
